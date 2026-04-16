@@ -1,5 +1,6 @@
-import TaskCard from '../components/TaskCard';
+import TaskCard from '../components/TaskCard/TaskCard';
 import { taskData } from '../data/taskData';
+import './Layout.css'
 
 const Layout = () => {
     return (

@@ -1,0 +1,109 @@
+/* ── Card shell ──────────── */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(17, 28, 48, 0.97), rgba(10, 18, 31, 0.97));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  transition: opacity .3s, box-shadow .3s;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+}
+
+.card--done {
+  opacity: .88;
+}
+
+.card--done .card__title,
+.card--done .card__desc {
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 255, 255, 0.28);
+}
+
+/* ── Glow ────────────────── */
+.card__glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(114, 170, 255, 0.22), transparent 70%);
+  top: -80px;
+  right: -60px;
+  pointer-events: none;
+}
+
+/* ── Priority accent bar ─── */
+.card__priority-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 26px 0 0 26px;
+  transition: background .35s;
+}
+
+/* ── Layout grid ─────────── */
+.card__grid {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  padding: 28px 28px 28px 36px;
+}
+
+.card__main {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 780px) {
+  .card__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .card__grid {
+    padding: 20px 20px 20px 26px;
+  }
+}
+
+/* ── Pulse row ───────────── */
+.pulse-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8da4c8;
+  font-size: .85rem;
+}
+
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7ef0bf;
+  box-shadow: 0 0 0 0 rgba(126, 240, 191, .6);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(126, 240, 191, .6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 9px rgba(126, 240, 191, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(126, 240, 191, 0);
+  }
+}

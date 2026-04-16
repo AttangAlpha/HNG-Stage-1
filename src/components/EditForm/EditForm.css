@@ -1,0 +1,111 @@
+/* ── Edit form ───────────── */
+.edit-form {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  animation: fadeSlide .25s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: .78rem;
+  color: #8da4c8;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  padding: 10px 14px;
+  border-radius: 12px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f0f4fb;
+  font: inherit;
+  font-size: .92rem;
+  transition: border-color .2s, background .2s;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: rgba(140, 180, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+.form-select option {
+  background: #0e1c32;
+  color: #f0f4fb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.form-btn {
+  padding: 9px 20px;
+  border-radius: 11px;
+  border: 1px solid;
+  font: inherit;
+  font-size: .88rem;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+
+.form-btn:hover {
+  transform: translateY(-1px);
+}
+
+.form-btn--save {
+  background: rgba(90, 160, 255, 0.2);
+  border-color: rgba(90, 160, 255, 0.4);
+  color: #c8deff;
+}
+
+.form-btn--cancel {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #8da4c8;
+}

@@ -1,0 +1,62 @@
+/* ── Description wrapper ─── */
+.desc-wrapper {
+  position: relative;
+}
+
+.card__desc {
+  color: #b8cceb;
+  line-height: 1.68;
+  font-size: .95rem;
+  max-width: 62ch;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+
+.card__desc.expanded {
+  display: block;
+}
+
+/* ── Expand toggle ───────── */
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7ea8e0;
+  font: inherit;
+  font-size: .82rem;
+  padding: 2px 0;
+  transition: color .2s;
+}
+
+.expand-btn:hover {
+  color: #adc8f5;
+}
+
+.expand-chevron {
+  transition: transform .25s;
+}
+
+.expand-chevron.up {
+  transform: rotate(180deg);
+}
+
+/* ── Collapsible section ─── */
+.collapsible-section {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .35s ease;
+}
+
+.collapsible-section.open {
+  grid-template-rows: 1fr;
+}
+
+.collapsible-inner {
+  overflow: hidden;
+}

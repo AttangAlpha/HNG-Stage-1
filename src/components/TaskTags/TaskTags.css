@@ -1,0 +1,25 @@
+/* ── Tags block ──────────── */
+.tags-block {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tags-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag-chip {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(116,140,255,0.14);
+  border: 1px solid rgba(116,140,255,0.22);
+  color: #cdd6ff;
+  font-size: .82rem;
+}
+

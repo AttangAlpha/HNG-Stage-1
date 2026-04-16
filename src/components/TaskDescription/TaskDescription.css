@@ -1,0 +1,6 @@
+.task-card__description {
+  margin: 0;
+  max-width: 68ch;
+  color: #bfd0ea;
+  line-height: 1.65;
+}
